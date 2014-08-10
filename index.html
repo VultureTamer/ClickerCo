@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <!-- This website template was downloaded from http://www.nuviotemplates.com - visit us for more templates -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="robots" content="all,follow" />
+
+    <meta name="author" lang="en" content="All: Your website name [www.your-website.com]; e-mail: info@your-website.com" />
+    <meta name="copyright" lang="en" content="webdesign: Vit Dlouhy [Nuvio - www.nuvio.cz; NuvioTemplates - www.nuviotemplates.com]; e-mail: hello@nuviotemplates.com" />
+
+    <meta name="description" content="clicker game company" />
+    <meta name="keywords" content="clicker game company" />
+    
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="css/main-msie.css" /><![endif]-->
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="css/scheme.css" />
+    <link rel="stylesheet" media="print" type="text/css" href="css/print.css" />
+
+    <title>Clicker Co. | Homepage</title>
+</head>
+
+<body>
+
+<div id="main">
+
+    <!-- Header -->
+    <div id="header">
+
+        <!-- Your logo -->
+        <h1 id="logo"><a href="#">Clicker Company</a></h1>
+        <hr class="noscreen" />        
+
+        <!-- Your slogan -->
+        <div id="slogan"></div>
+        <hr class="noscreen" />        
+        
+        <!-- Hidden navigation -->
+        <p class="noscreen noprint"><em>Quick links: <a href="#content">content</a>, <a href="#nav">navigation</a>.</em></p>
+        <hr class="noscreen" />
+
+    </div> <!-- /header -->
+
+    <!-- Navigation -->
+    <div id="nav">
+    
+        <ul class="box">
+            <li id="nav-active"><a href="#">Homepage</a></li> <!-- Active page (highlighted) -->
+            <!-- <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li> -->
+        </ul>
+        
+    <hr class="noscreen" /> 
+    </div> <!-- /nav -->
+
+    <!-- 2 columns (content + sidebar) -->
+    <div id="cols" class="box">
+
+        <!-- Content -->
+        <div id="content">
+        
+            <h2 id="content-title">Your assets</h2>
+            
+            <!-- Perex -->
+            <div id="perex" class="box">
+            
+                
+                <button onClick="goldClick(incomeperclick)" style="width:100px;heigth:180px">Get Gold!</button>
+				<span id="gold">0</span> gold</br>
+				<span id="goldpertick">0</span> gold/tick</br>
+				<span id="goldperclick">1</span> gold/click</br>
+				<span id="clicks"></span> <!-- for checking purposes -->
+				
+				
+            </div> <!-- /perex -->
+
+            <hr class="noscreen" />
+            
+            <div id="content-in">
+                
+                <!-- 3 sections -->
+                <div id="sections" class="box">
+
+                    <!-- Section -->                
+                    <div class="section">
+                        <h3><a>Hire your workforce</a></h3>
+                        <!-- <p><a href="#"><img src="tmp/image.gif" width="200" height="150" alt="" /></a></p>    -->
+                        <div class="section-in">
+							<!-- buttons need to be in good shape -->
+                            <div style="text-align:center ;padding:5%">	
+								<button onClick="buydude(dude)" style="width:180px;color:#303030">
+									<span >Dude</span><br/>
+									<span style="font-size:90%;font-style: italic"><span id="dudeincome">0,1</span> gold/tick; Cost: <span id="dudeCost"></span></span></br>
+									Owned: <span id="dudestotal">0</span> (<span id="dudesbought">0</span>)
+								</button></br>
+								
+								<button onClick="buydude(betterdude)" style="width:180px;color:#303030">
+									<span >Better Dude</span><br/>
+									<span style="font-size:90%;font-style: italic">1 Dude/10 ticks; Cost: <span id="betterdudeCost"></span></span></br>
+									Owned: <span id="betterdudestotal">0</span> (<span id="betterdudesbought">0</span>)
+								</button></br>
+								
+								<button onClick="buydude(superdude)" style="width:180px;color:#303030">
+									<span >Super Dude</span><br/>
+									<span style="font-size:90%;font-style: italic">1 Better Dude/10 ticks; Cost: <span id="superdudeCost"></span></span></br>
+									Owned: <span id="superdudestotal">0</span> (<span id="superdudesbought">0</span>)
+								</button></br>
+								
+								<button onClick="buydude(bestdude)" style="width:180px;color:#303030">
+									<span >Best Dude</span><br/>
+									<span style="font-size:90%;font-style: italic">1 Super Dude/10 ticks; Cost: <span id="bestdudeCost"></span></span></br>
+									Owned: <span id="bestdudestotal">0</span> (<span id="bestdudesbought">0</span>)
+								</button></br>
+								
+								<button id="KayButton" onClick="buydude(Kay))" style="width:180px;color:#303030;display:none">
+									<span >Kay</span><br/>
+									<span style="font-size:90%;font-style: italic">1 Best Dude/10 ticks; Cost: <span id="KayCost"></span></span></br>
+									Owned: <span id="Kaytotal">0</span> (<span id="Kaybought">0</span>)
+								</button></br>
+								
+							</div> <!-- button style -->
+						</div> <!-- /section-in -->
+                        
+                    </div> <!-- /section -->
+                    
+					
+					
+					<!-- Section -->                
+                    <div class="section margin">
+                        <h3><a>Get some equipment!</a></h3>
+                        <!-- <p><a href="#"><img src="tmp/image.gif" width="200" height="150" alt="" /></a></p>    -->
+                        <div class="section-in">
+							<!-- buttons need to be in good shape -->
+                            <div style="text-align:center ;padding:5%">	
+								<button onClick="buyEquipment(mouse)" style="width:180px;color:#303030">
+									<span >Mouse</span><br/>
+									<span style="font-size:90%;font-style: italic"><span id="mouseincome">0,2</span> gold/click; Cost: <span id="mouseCost">25</span></span></br>
+									Owned: <span id="mousetotal">0</span> (<span id="mousebought">0</span>)
+								</button></br>
+								
+								<button onClick="buyEquipment(cat)" style="width:180px;color:#303030">
+									<span >Cat</span><br/>
+									<span style="font-size:90%;font-style: italic">1 mouse/25 clicks; Cost: <span id="catCost">2.50k</span></span></br>
+									Owned: <span id="cattotal">0</span> (<span id="catbought">0</span>)
+								</button></br>
+								
+								<button onClick="buyEquipment(dog)" style="width:180px;color:#303030">
+									<span >Dog</span><br/>
+									<span style="font-size:90%;font-style: italic">1 cat/25 clicks; Cost: <span id="dogCost">20.00k</span></span></br>
+									Owned: <span id="dogtotal">0</span> (<span id="dogbought">0</span>)
+								</button></br>
+								
+								<button onClick="buyEquipment(hotdog)" style="width:180px;color:#303030">
+									<span >Hot Dog</span><br/>
+									<span style="font-size:90%;font-style: italic">1 Dog/25 clicks; Cost: <span id="hotdogCost">1.50m</span></span></br>
+									Owned: <span id="hotdogtotal">0</span> (<span id="hotdogbought">0</span>)
+								</button></br>
+								
+								
+							</div> <!-- button style -->
+						</div> <!-- /section-in -->
+                        
+                    </div> <!-- /section -->
+                
+                    <!-- Section -->                
+                    <div class="section fix">
+                        <h3><a>Reorganization!</a></h3>
+                        <!-- <p><a href="#"><img src="tmp/image.gif" width="200" height="150" alt="" /></a></p>    -->
+                        <div class="section-in">
+							<!-- buttons need to be in good shape -->
+                            <div style="text-align:center ;padding:5%">	
+								<button id="unlockKay" onClick="reset1()" style="width:180px;color:#303030"></br>
+									Unlock Kay! </br>
+									<span style="font-style: italic;font-size:90%">Who is this God your talking about?</span></br></br>
+								</button></br>
+								
+								<button onClick="reset2()" style="width:180px;color:#303030"></br>
+									Unlock Better Kay! </br>
+									<span style="font-style: italic;font-size:90%">Is this even possible?</span></br></br>
+								</button></br>
+								
+								<button onClick="reset3()" style="width:180px;color:#303030"></br>
+									Unlock Super Kay! </br>
+									<span style="font-style: italic;font-size:90%">Can he fly?</span></br></br>
+								</button></br>
+								
+								<button onClick="reset4()" style="width:180px;color:#303030"></br>
+									Unlock Best Kay! </br>
+									<span style="font-style: italic;font-size:90%">What could possibly go wrong?</span></br></br>
+								</button></br>
+								
+								
+							</div> <!-- button style -->
+						</div> <!-- /section-in -->
+                        
+                    </div> <!-- /section -->
+					
+                </div> <!-- /sections -->
+                
+                <div id="sections-bottom"></div>
+
+             
+            </div> <!-- /content-in -->
+               
+        </div> <!-- /content -->
+
+        <hr class="noscreen" />
+
+        <!-- Sidebar -->
+        <div id="aside">
+
+            <!-- News -->                    
+            <h4 id="aside-title">Upgrades</h4>
+            
+            <div class="aside-in">
+                <div class="aside-box">
+					<div style="text-align:center ;padding:5%">	
+								<button onClick="upgradeDude()" style="width:180px;color:#303030">
+								Buy cookies for the dudes</br>
+								Cost: <span id="upgradecost">1.00k</span>
+								</button>
+					</div>
+                </div> <!-- /aside-box -->
+            </div> <!-- /aside-in -->
+            
+            <!-- Contact -->
+            <h4 class="title">Contact</h4>
+
+            <div class="aside-in">
+                <div class="aside-box">
+
+                    <address>
+                        <strong>Kay Van Wynendaele</strong><br />
+                        <a href="#">kay.vanwynendaele@gmail.com</a>
+                    </address>
+
+                </div> <!-- /aside-box -->
+            </div> <!-- /aside-in -->
+   
+        </div> <!-- /aside -->
+    
+    </div> <!-- /cols -->
+    
+    <div id="cols-bottom"></div>
+
+    <hr class="noscreen" />
+    
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Do you want remove this backlinks? Look at www.nuviotemplates.com/payment.php -->            
+        <p class="f-right"><a href="http://www.nuviotemplates.com/">Free web templates</a> presented by <a href="http://www.qartin.cz/">QARTIN</a>, sponsored by <a href="http://www.lekynainternetu.cz/">Leky</a></p>
+        <!-- Do you want remove this backlinks? Look at www.nuviotemplates.com/payment.php -->
+        
+        <p>&copy;&nbsp;2014 <a href="#">Kay Van Wynendaele</a></p>
+
+    </div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+<script type="text/javascript" src="main.js"></script>
+<script src="libraries/numbers/min/numeral.min.js"></script>
+
+</body>
+</html>
